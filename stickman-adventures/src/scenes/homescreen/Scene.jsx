@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-
 import VideoPlayer from "../../components/VideoPlayer/VideoPlayer";
 import Video from './startscreen.gif';
 import './Scene.css';

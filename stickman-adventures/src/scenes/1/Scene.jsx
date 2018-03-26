@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 import "./Scene.css";
-import Intro from "./4_start.mp4"
-import End from "./4_end.gif"
+import Intro from "./1_start.mp4"
+import End from "./1_end.gif"
 import InfoText from "../../components/InfoText/InfoText";
 import OptionsChooser from "../../components/OptionsChooser/OptionsChooser";
 
