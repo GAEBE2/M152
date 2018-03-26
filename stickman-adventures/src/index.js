@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import Scene1 from './scenes/1/Scene1';
+import Router from './components/router/RouterConfig';
 
-ReactDOM.render(<Scene1/>, document.getElementById('root'));
+ReactDOM.render(<Router/>, document.getElementById('root'));

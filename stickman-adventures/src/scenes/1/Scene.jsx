@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import './Scene1.css';
+import './Scene.css';
 import Container from "../../components/Container";
 
 export default class Scene1 extends Component {
