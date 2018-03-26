@@ -22,3 +22,10 @@ button:focus, button:hover {
     margin: 30px auto;
     display: table;
 }
+
+img {
+    max-width: 550px;
+    max-height: 400px;
+    margin-top: 45px;
+}
+

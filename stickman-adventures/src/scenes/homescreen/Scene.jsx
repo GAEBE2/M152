@@ -14,7 +14,10 @@ export default class Scene1 extends Component {
     render() {
         return (
             <div>
-                <VideoPlayer video={Video} handler={this.handler} format="video/gif"/>
+                <img src={Video}/>
+                <div className="overlay"/>
+                <h1 className="master-title">Willkommen</h1>
+                <button className="start-button"></button>
             </div>
         );
     }

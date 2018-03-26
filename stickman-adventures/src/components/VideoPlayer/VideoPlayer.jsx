@@ -1,24 +1,28 @@
 import React from 'react';
+import PropTypes from "prop-types";
 
 export default class VideoPlayer extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            autoPlay: props.autoPlay || true,   // boolean, if true the video should autoplay
-            video: props.video,                 // the imported video
-            height: props.height || 400,
-            width: props.width || 550,
-            handlers: props.handler,            // an object with multiple callbacks like onEnded
-            format: props.format
-        };
-    }
-
     render() {
-        return <video width={this.state.width} height={this.state.height}
-                      autoPlay={this.state.autoPlay}
-                      onEnded={this.state.handlers.onEnded}>
-            <source src={this.state.video} type={this.state.format}/>
-            <p>Dieser Browser unterstütz kein video-format. Bitte wechseln Sie zu Chrome oder aktualisieren Sie ihren Browser</p>
+        return <video width={this.props.width} height={this.props.height}
+                      autoPlay={this.props.autoPlay}
+                      onEnded={this.props.onEndedHandler}>
+            <source src={this.props.video} type={this.props.type}/>
+            <p>Dieser Browser unterstützt kein Video-Format. Bitte wechseln Sie zu Chrome oder aktualisieren Sie Ihren Browser</p>
         </video>;
     }
 }
+
+VideoPlayer.propTypes = {
+    autoPlay: PropTypes.bool,
+    video: PropTypes.string.isRequired,
+    height: PropTypes.number,
+    width: PropTypes.number,
+    onEndedHandler: PropTypes.func,
+    type: PropTypes.string,
+};
+
+VideoPlayer.defaultProps = {
+    autoPlay: false,
+    height: 400,
+    width: 550,
+};
