@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import PropTypes from "prop-types";
+import "./InfoText.css";
 
 export default class InfoText extends Component {
     render() {
