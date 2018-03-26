@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import Container from './Container';
+import Scene1 from './scenes/1/Scene1';
 
-ReactDOM.render(<Container/>, document.getElementById('root'));
+ReactDOM.render(<Scene1/>, document.getElementById('root'));
