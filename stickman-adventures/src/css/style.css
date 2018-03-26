@@ -1,0 +1,23 @@
+button {
+    border: none;
+    font-family: 'Indie Flower', cursive;
+    font-size: 32px;
+    cursor: pointer;
+}
+
+button:focus {
+    outline: none;
+    background: #e0e0e0;
+}
+
+.container {
+    border: 1px solid #000;
+    width: 550px;
+    height: 400px;
+    margin: auto;
+}
+
+.container > h1 {
+    margin: 30px auto;
+    display: table;
+}
