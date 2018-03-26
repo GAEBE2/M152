@@ -1,6 +1,6 @@
 import React from "react";
-import Scene1 from "../../scenes/1/Scene";
-import Scene4 from "../../scenes/4/Scene";
+import Scene1 from "../../scenes/homescreen/Scene";
+import Scene4 from "../../scenes/1/Scene";
 import {HashRouter, Route, Switch} from "react-router-dom";
 import Container from "../Container";
 import NoSuchLink from "../NoSuchLink";
