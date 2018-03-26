@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import './Scene4.css';
+import './Scene.css';
 
 export default class Scene1 extends Component {
     render() {
