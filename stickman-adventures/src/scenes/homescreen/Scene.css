@@ -6,11 +6,10 @@
 }
 
 .start-button {
-    margin: auto;
-    background: url("./Button_Start.png");
-    width: 50px;
-    height: 20px;
+    /*background: url("./Button_Start.png");*/
+    margin: 325px 225px auto;
 }
+
 .overlay {
     margin: auto;
     width: 550px;
@@ -18,4 +17,8 @@
     position: absolute;
     top: 0;
     background-color: #ffffff80;
+}
+
+.welcome-image {
+    margin-top: 45px;
 }

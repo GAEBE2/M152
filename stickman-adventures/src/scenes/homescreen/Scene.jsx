@@ -14,10 +14,11 @@ export default class Scene1 extends Component {
     render() {
         return (
             <div>
-                <img src={Video}/>
-                <div className="overlay"/>
-                <h1 className="master-title">Willkommen</h1>
-                <button className="start-button"></button>
+                <img className="welcome-image" src={Video}/>
+                <div className="overlay">
+                    <h1 className="master-title">Willkommen</h1>
+                    <button className="start-button">Start</button>
+                </div>
             </div>
         );
     }
