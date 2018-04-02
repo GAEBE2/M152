@@ -40,7 +40,7 @@ export default class Scene extends Component {
                 <InfoText
                     text="Du, (Name des Spielers), bist mit deiner Ehepartnerin zuhause und siehst ihr beim Kochen zu. Dir werden fortlaufend Interaktionen vorgeschlagen, von welchen du eine auswählen musst. Je nach dem, was für eine Interaktion du wählst, ändert sich die Geschichte und deren Ende."/>
                 {this.state.introPlaying &&
-                <VideoPlayer video={Intro} onEndedHandler={this.myHandler} type="video/mp4" autoPlay={true}/>}
+                <VideoPlayer video={Intro} onEndedHandler={this.myHandler} type="video/mp4"/>}
                 {!this.state.introPlaying &&
                 <div>
                     <img src={End}/>

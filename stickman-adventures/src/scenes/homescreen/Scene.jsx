@@ -1,25 +1,21 @@
 import React, {Component} from 'react';
-import VideoPlayer from "../../components/VideoPlayer/VideoPlayer";
 import Video from './startscreen.gif';
 import './Scene.css';
+import {withRouter} from 'react-router-dom'
+import BoxedButton from "../../components/BoxedButton/BoxedButton";
 
-export default class Scene1 extends Component {
-
-    handler = {
-        onEnded: () => {
-            console.log('ENDED BRO');
-        }
-    };
-
+class Scene1 extends Component {
     render() {
         return (
             <div>
                 <img className="welcome-image" src={Video}/>
                 <div className="overlay">
                     <h1 className="master-title">Willkommen</h1>
-                    <button className="start-button">Start</button>
+                    <BoxedButton className="start-button" onClick={() => this.props.history.push("/option1")} text="Start"/>
                 </div>
             </div>
         );
     }
 }
+
+export default withRouter(Scene1);
