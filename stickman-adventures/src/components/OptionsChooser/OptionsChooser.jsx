@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import PropTypes from "prop-types";
 import "./OptionsChooser.css"
+import BoxedButton from "../BoxedButton/BoxedButton";
 
 export default class OptionsChooser extends Component {
 
@@ -16,9 +17,10 @@ export default class OptionsChooser extends Component {
 
                         if (func !== undefined && text !== undefined
                             && typeof(func) === "function" && typeof(text) === "string") {
-                            return <button className="option"
-                                           key={key}
-                                           onClick={func}>{(index + 1) + ") " + text}</button>
+                            return <BoxedButton className="option"
+                                                key={key}
+                                                onClick={func}
+                                                text={(index + 1) + ") " + text}/>
                         } else {
                             console.error("Wrong proptypes for OptionsChooser")
                         }

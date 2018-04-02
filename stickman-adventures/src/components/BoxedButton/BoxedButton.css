@@ -1,4 +1,4 @@
-#boxed-button {
+.boxed-button {
     background: none;
     border: none;
     font-family: 'Indie Flower', cursive;
@@ -6,14 +6,12 @@
     cursor: pointer;
 }
 
-#boxed-button:focus, #boxed-button:hover {
+.boxed-button:focus, .boxed-button:hover {
     outline: none;
     background-color: #e5e5e5;
 }
 
-#boxed-button {
+.boxed-button {
     background: url("../../img/Box.svg") no-repeat;
     padding: 15px;
-
-
 }
