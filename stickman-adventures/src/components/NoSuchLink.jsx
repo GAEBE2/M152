@@ -1,10 +1,10 @@
 import React, {Component} from 'react';
 
-export default class Scene1 extends Component {
+export default class NoSuchLink extends Component {
     render() {
         return (
             <div>
-                No such link :(
+                Dieser Link existiert nicht!
             </div>
         );
     }
