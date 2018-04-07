@@ -16,17 +16,18 @@ export default class BoxedButton extends Component {
     id = makeid();
 
     componentDidMount() {
-        const width = document.getElementById(this.id).offsetWidth + 40,
+
+        const width = document.getElementById(this.id).offsetWidth + (this.props.small ? 10 : 40),
             height = document.getElementById(this.id).offsetHeight;
         console.log(width, height, this.id)
         document.getElementById(this.id).style.backgroundSize = width + "px " + height + "px";
-        document.getElementById(this.id).style.backgroundPosition = -20 + "px";
+        document.getElementById(this.id).style.backgroundPosition = -(this.props.small ? 5 : 20) + "px";
         this.forceUpdate()
     }
 
     render() {
         return (
-            <button id={this.id} className={"boxed-button" + " " + this.props.className || ""} onClick={this.props.onClick}>
+            <button id={this.id} className={"boxed-button" + " " + (this.props.className || "")} onClick={this.props.onClick}>
                 {this.props.text}
             </button>
         );
@@ -37,4 +38,5 @@ BoxedButton.propTypes = {
     text: PropTypes.string.isRequired,
     onClick: PropTypes.func.isRequired,
     className: PropTypes.string,
+    small: PropTypes.bool
 };

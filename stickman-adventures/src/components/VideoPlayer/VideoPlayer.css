@@ -1,3 +1,8 @@
-#scene4-end {
-    display: none;
+.boxed-button {
+    margin: 20px;
+}
+
+.interaction-section {
+    display: flex;
+    justify-content: center;
 }

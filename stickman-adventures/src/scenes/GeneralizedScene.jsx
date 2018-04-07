@@ -4,6 +4,7 @@ import OptionsChooser from "../components/OptionsChooser/OptionsChooser";
 import VideoPlayer from "../components/VideoPlayer/VideoPlayer";
 import FadeInBox from "../components/FadeInBox/FadeInBox";
 import PropTypes from "prop-types";
+import BoxedButton from "../components/BoxedButton/BoxedButton";
 
 export default class GeneralizedScene extends Component {
     state = {
@@ -27,6 +28,7 @@ export default class GeneralizedScene extends Component {
                     <OptionsChooser key="options-chooser" options={this.props.options}/>,
                     <FadeInBox key="fade-in-box">
                         <img src={this.props.endGif}/>
+                        <BoxedButton text="Wiederholen" onClick={() => this.setState({introPlaying: true})} small={true}/>
                     </FadeInBox>
                 ]}
             </div>
