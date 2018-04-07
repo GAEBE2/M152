@@ -4,8 +4,11 @@ import '../css/style.css';
 export default class Container extends Component {
     render() {
         return (
-            <div className="container">
-                {this.props.children}
+            <div>
+                <h1 className="title">Stickman adventures</h1>
+                <div className="container">
+                    {this.props.children}
+                </div>
             </div>
         );
     }

@@ -23,10 +23,12 @@ export default class GeneralizedScene extends Component {
                              type="video/mp4"
                              autoPlay={true}/>}
                 {!this.state.introPlaying &&
-                <FadeInBox>
-                    <img src={this.props.endGif}/>
-                    <OptionsChooser options={this.props.options}/>
-                </FadeInBox>}
+                [
+                    <OptionsChooser key="options-chooser" options={this.props.options}/>,
+                    <FadeInBox key="fade-in-box">
+                        <img src={this.props.endGif}/>
+                    </FadeInBox>
+                ]}
             </div>
         );
     }

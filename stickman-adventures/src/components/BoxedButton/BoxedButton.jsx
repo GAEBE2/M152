@@ -16,16 +16,17 @@ export default class BoxedButton extends Component {
     id = makeid();
 
     componentDidMount() {
-        const width = document.getElementById(this.id).offsetWidth,
+        const width = document.getElementById(this.id).offsetWidth + 40,
             height = document.getElementById(this.id).offsetHeight;
         console.log(width, height, this.id)
         document.getElementById(this.id).style.backgroundSize = width + "px " + height + "px";
+        document.getElementById(this.id).style.backgroundPosition = -20 + "px";
         this.forceUpdate()
     }
 
     render() {
         return (
-            <button id={this.id} className={"boxed-button" + " " + this.props.className} onClick={this.props.onClick}>
+            <button id={this.id} className={"boxed-button" + " " + this.props.className || ""} onClick={this.props.onClick}>
                 {this.props.text}
             </button>
         );

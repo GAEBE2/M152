@@ -19,9 +19,10 @@ export default class Scene extends Component {
 
     render() {
         console.log("1.1")
+        console.log(this.props)
         return <GeneralizedScene introVideo={Intro}
                                  endGif={End}
                                  options={this.options}
-                                 infoText="Du hilfst mit kochen, jedoch beginnt sich das Essen nach einiger Zeit in der Pfanne zu entflammen. Dein Ehepartner holt den Gartenschlauch und versucht das Feuer erfolgslos zu löschen. Beide flüchten aus dem Haus, während dieses abbrennt und in sich einstürzt."/>
+                                 infoText="Du hilfst beim Kochen, jedoch beginnt sich das Essen nach einiger Zeit in der Pfanne zu entflammen. Dein Ehepartner holt den Gartenschlauch und versucht das Feuer erfolgslos zu löschen. Beide flüchten aus dem Haus, während dieses abbrennt und in sich einstürzt."/>
     }
 }

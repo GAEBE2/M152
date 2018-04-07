@@ -8,7 +8,7 @@ import GeneralizedScene from "../GeneralizedScene";
 class Scene extends Component {
     options = {
         option1: {
-            text: "Du hilfst mit kochen",
+            text: "Du hilfst beim Kochen",
             func: () => this.props.history.push("/scene11")
         },
         option2: {
