@@ -1,7 +1,6 @@
 import React from "react";
 import Homescreen from "../../scenes/homescreen/Scene";
-import Option1 from "../../scenes/options1/Scene";
-import Option2 from "../../scenes/options2/Scene";
+import Option1 from "../../scenes/options/Scene";
 import Scene1 from "../../scenes/1/Scene";
 import Scene11 from "../../scenes/1/1/Scene";
 import Scene111 from "../../scenes/1/1/1/Scene";
@@ -27,8 +26,7 @@ export default class RouterConfig extends React.Component {
                     <Switch>
                         <Route exact path="/" component={Homescreen}/>
                         <Route exact path="/home" component={Homescreen}/>
-                        <Route exact path="/option1" component={Option1}/>
-                        <Route exact path="/option2" component={Option2}/>
+                        <Route exact path="/options" component={Option1}/>
                         <Route exact path="/scene1" component={Scene1}/>
                         <Route exact path="/scene11" component={Scene11}/>
                         <Route exact path="/scene111" component={Scene111}/>

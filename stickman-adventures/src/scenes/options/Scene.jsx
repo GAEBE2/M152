@@ -32,7 +32,7 @@ class Scene extends Component {
 
     onContinue = () => {
         localStorage.setItem("name", this.state.name);
-        this.props.history.push("/option2")
+        this.props.history.push("/scene1")
     };
 
     render() {
