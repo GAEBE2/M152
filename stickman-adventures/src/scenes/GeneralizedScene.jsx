@@ -38,6 +38,6 @@ GeneralizedScene.propTypes = {
     infoText: PropTypes.string,
     introVideo: PropTypes.string.isRequired,
     endGif: PropTypes.string.isRequired,
-    options: PropTypes.object.isRequired,
+    options: PropTypes.array.isRequired,
     children: PropTypes.array,
 };

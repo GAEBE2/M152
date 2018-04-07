@@ -5,21 +5,19 @@ import End from "./1_1_Ende.gif";
 import GeneralizedScene from "../../GeneralizedScene";
 
 export default class Scene extends Component {
-
-    options = {
-        option1: {
+    options = [
+        {
             text: "Du gibst deinem Ehepartner die Schuld, da er Wasser über die Pfanne geschüttet hat",
             func: () => this.props.history.push("/scene111")
         },
-        option2: {
+        {
             text: "Du reservierst ein naheliegendes Hotel",
             func: () => this.props.history.push("/scene112")
         }
-    };
+    ];
 
     render() {
         console.log("1.1")
-        console.log(this.props)
         return <GeneralizedScene introVideo={Intro}
                                  endGif={End}
                                  options={this.options}

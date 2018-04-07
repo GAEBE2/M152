@@ -15,8 +15,7 @@ export default class OptionsChooser extends Component {
                         const func = this.props.options[key].func,
                             text = this.props.options[key].text;
 
-                        if (func !== undefined && text !== undefined
-                            && typeof(func) === "function" && typeof(text) === "string") {
+                        if (func !== undefined && text !== undefined) {
                             return <BoxedButton className="option"
                                                 key={key}
                                                 onClick={func}
@@ -32,5 +31,10 @@ export default class OptionsChooser extends Component {
 }
 
 OptionsChooser.propTypes = {
-    options: PropTypes.object.isRequired
+    options: PropTypes.arrayOf(
+        PropTypes.shape({
+            func: PropTypes.func.isRequired,
+            text: PropTypes.string.isRequired
+        })
+    )
 };

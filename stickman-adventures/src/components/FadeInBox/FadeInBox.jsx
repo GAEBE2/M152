@@ -13,6 +13,9 @@ export default class FadeInBox extends Component {
 }
 
 FadeInBox.propTypes = {
-    children: PropTypes.array,
+    children: PropTypes.oneOfType([
+        PropTypes.array,
+        PropTypes.object
+    ]),
     className: PropTypes.string
 };

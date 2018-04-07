@@ -6,16 +6,16 @@ import {withRouter} from "react-router-dom";
 import GeneralizedScene from "../GeneralizedScene";
 
 class Scene extends Component {
-    options = {
-        option1: {
+    options = [
+        {
             text: "Du hilfst beim Kochen",
             func: () => this.props.history.push("/scene11")
         },
-        option2: {
+        {
             text: "Du fragst, wenn das Essen fertig ist und gehst in das Wohnzimmer",
             func: () => this.props.history.push("/scene12")
         }
-    };
+    ];
 
     render() {
         return <GeneralizedScene introVideo={Intro}
