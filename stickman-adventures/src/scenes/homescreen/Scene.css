@@ -1,12 +1,12 @@
 .master-title {
     font-size: 64px;
     position: absolute;
-    margin: 20px 131px;
+    margin: 70px 131px;
     top: 0;
 }
 
 .start-button {
-    margin: 305px 225px auto;
+    margin: 405px 243px auto !important;
 }
 
 .overlay {

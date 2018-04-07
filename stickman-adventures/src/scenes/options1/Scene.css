@@ -1,0 +1,19 @@
+.title {
+    margin: auto;
+}
+
+.input-name {
+    display: block;
+    margin: auto;
+    width: 200px;
+    height: 40px;
+    background-size: 255px 70px;
+    background-position-x: -13px;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.continue-button {
+    display: block;
+    margin: 100px auto auto !important;
+}

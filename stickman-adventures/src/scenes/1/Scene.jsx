@@ -21,7 +21,7 @@ class Scene extends Component {
         return <GeneralizedScene introVideo={Intro}
                                  endGif={End}
                                  options={this.options}
-                                 infoText={"Du, (Name des Spielers), bist mit deiner Ehepartnerin zuhause und siehst ihr beim Kochen zu. Dir werden fortlaufend Interaktionen vorgeschlagen, von welchen du eine auswählen musst. Je nach dem, was für eine Interaktion du wählst, ändert sich die Geschichte und deren Ende."}/>
+                                 infoText={"Du, " + localStorage.getItem("name") + ", bist mit deiner Ehepartnerin zuhause und siehst ihr beim Kochen zu. Dir werden fortlaufend Interaktionen vorgeschlagen, von welchen du eine auswählen musst. Je nach dem, was für eine Interaktion du wählst, ändert sich die Geschichte und deren Ende."}/>
     }
 }
 

@@ -11,7 +11,8 @@ class Scene1 extends Component {
                 <img className="welcome-image" src={Video}/>
                 <div className="overlay">
                     <h1 className="master-title">Willkommen</h1>
-                    <BoxedButton className="start-button" onClick={() => this.props.history.push("/option1")} text="Start"/>
+                    <BoxedButton className="start-button" onClick={() => this.props.history.push("/option1")}
+                                 text="Start" small={true}/>
                 </div>
             </div>
         );

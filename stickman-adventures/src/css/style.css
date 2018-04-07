@@ -20,3 +20,13 @@ img {
     max-height: 400px;
 }
 
+input {
+    font-family: 'Indie Flower', cursive !important;
+    background: url(../img/Box.svg) no-repeat;
+    border: none;
+    padding: 15px;
+}
+
+input:focus {
+    outline: none;
+}

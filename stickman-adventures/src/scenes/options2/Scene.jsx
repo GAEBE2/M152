@@ -10,7 +10,7 @@ class Scene extends Component {
         return (
             <div>
                 option2
-                <BoxedButton className="continue-button" onClick={() => this.props.history.push("/scene1")} text="Weiter"/>
+                <BoxedButton className="continue-button" onClick={() => this.props.history.push("/scene1")} text="Weiter" small={true}/>
             </div>
         );
     }

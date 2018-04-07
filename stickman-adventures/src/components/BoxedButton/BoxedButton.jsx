@@ -27,7 +27,8 @@ export default class BoxedButton extends Component {
 
     render() {
         return (
-            <button id={this.id} className={"boxed-button" + " " + (this.props.className || "")} onClick={this.props.onClick}>
+            <button id={this.id} className={"boxed-button" + " " + (this.props.className || "")}
+                    onClick={this.props.onClick} disabled={this.props.disabled}>
                 {this.props.text}
             </button>
         );
@@ -38,5 +39,6 @@ BoxedButton.propTypes = {
     text: PropTypes.string.isRequired,
     onClick: PropTypes.func.isRequired,
     className: PropTypes.string,
-    small: PropTypes.bool
+    small: PropTypes.bool,
+    disabled: PropTypes.bool
 };

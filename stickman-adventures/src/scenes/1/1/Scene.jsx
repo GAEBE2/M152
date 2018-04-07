@@ -21,6 +21,6 @@ export default class Scene extends Component {
         return <GeneralizedScene introVideo={Intro}
                                  endGif={End}
                                  options={this.options}
-                                 infoText="Du hilfst beim Kochen, jedoch beginnt sich das Essen nach einiger Zeit in der Pfanne zu entflammen. Dein Ehepartner holt den Gartenschlauch und versucht das Feuer erfolgslos zu löschen. Beide flüchten aus dem Haus, während dieses abbrennt und in sich einstürzt."/>
+                                 infoText="Du hilfst beim Kochen, jedoch beginnt sich das Essen nach einiger Zeit in der Pfanne zu entflammen. Dein Ehepartner holt den Gartenschlauch und versucht das Feuer erfolglos zu löschen. Beide flüchten aus dem Haus, während dieses abbrennt und in sich einstürzt."/>
     }
 }
