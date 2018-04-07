@@ -11,7 +11,7 @@ class Scene extends Component {
     };
 
     onNameChange = (event) => {
-        this.setState({name : event.target.value})
+        this.setState({name: event.target.value})
     };
 
     isDisabled() {
@@ -19,13 +19,13 @@ class Scene extends Component {
     }
 
     onClick = () => {
-        if(this.state.name === standardText) {
+        if (this.state.name === standardText) {
             this.setState({name: ""})
         }
     };
 
     onBlur = () => {
-        if(this.state.name === "") {
+        if (this.state.name === "") {
             this.setState({name: standardText})
         }
     };
@@ -35,12 +35,22 @@ class Scene extends Component {
         this.props.history.push("/scene1")
     };
 
+    onGenderClick(gender) {
+        localStorage.setItem("gender", gender);
+    };
+
     render() {
         return (
             <div>
                 <h1 className="title">Wähle deinen Namen</h1>
-                <input className="input-name" type="text" name="name" value={this.state.name} onChange={this.onNameChange} onClick={this.onClick} onBlur={this.onBlur}/>
-                <BoxedButton className="continue-button" disabled={this.isDisabled()} onClick={this.onContinue} text="Weiter" small={true}/>
+                <input className="input-name" type="text" name="name" value={this.state.name}
+                       onChange={this.onNameChange} onClick={this.onClick} onBlur={this.onBlur}/>
+                <div className="gender-buttons">
+                    <button className="m-button" onClick={() => this.onGenderClick("m")}></button>
+                    <button className="w-button" onClick={() => this.onGenderClick("w")}></button>
+                </div>
+                <BoxedButton className="continue-button" disabled={this.isDisabled()} onClick={this.onContinue}
+                             text="Weiter" small={true}/>
             </div>
         );
     }

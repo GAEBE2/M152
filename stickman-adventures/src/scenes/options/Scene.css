@@ -15,5 +15,23 @@
 
 .continue-button {
     display: block;
-    margin: 100px auto auto !important;
+    margin: 50px auto auto !important;
+}
+
+.m-button {
+    background: url("../../img/Button_M.png") no-repeat;
+    padding: 15px;
+    width: 82px;
+    height: 72px;
+}
+
+.w-button {
+    background: url("../../img/Button_W.png") no-repeat;
+    padding: 15px;
+    width: 82px;
+    height: 72px;
+}
+
+.gender-buttons {
+    margin: auto;
 }
