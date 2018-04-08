@@ -3,8 +3,9 @@ import "./Scene.css";
 import Intro from "./1_1_Start.mp4";
 import End from "./1_1_Ende.gif";
 import GeneralizedScene from "../../GeneralizedScene";
+import {withRouter} from "react-router-dom";
 
-export default class Scene extends Component {
+class Scene extends Component {
     options = [
         {
             text: "Du gibst deinem Ehepartner die Schuld, da er Wasser über die Pfanne geschüttet hat",
@@ -24,3 +25,5 @@ export default class Scene extends Component {
                                  infoText="Du hilfst beim Kochen, jedoch beginnt sich das Essen nach einiger Zeit in der Pfanne zu entflammen. Dein Ehepartner holt den Gartenschlauch und versucht das Feuer erfolglos zu löschen. Beide flüchten aus dem Haus, während dieses abbrennt und in sich einstürzt."/>
     }
 }
+
+export default withRouter(Scene);
