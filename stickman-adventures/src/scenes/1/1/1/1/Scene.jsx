@@ -10,14 +10,14 @@ class Scene extends Component {
         console.log("1.1.1.1")
 
         return <div>
-            <InfoText text="Du gehst den Streit ein und es gibt einen Kampf (Spiel). Sobald das Spiel zu Ende ist, wird der Gewinner gekürt."/>
+            <InfoText text="Du gehst den Streit ein und es gibt einen Kampf. Sobald das Spiel zu Ende ist, wird der Gewinner gekürt."/>
             <VideoPlayer video={Intro}
                          onEndedHandler={() => {
                              window.setTimeout(() => {
                                  this.props.history.push("/end");
                              }, 1000);
                          }}
-                         type="video/avi"
+                         type="video/mp4"
                          autoPlay={true}/>
         </div>
     }
