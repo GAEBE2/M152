@@ -13,8 +13,6 @@ import Scene1122 from "../../scenes/1/1/2/2/Scene";
 import Scene12 from "../../scenes/1/2/Scene";
 import Scene121 from "../../scenes/1/2/1/Scene";
 import Scene122 from "../../scenes/1/2/2/Scene";
-import Scene1221 from "../../scenes/1/2/2/1/Scene";
-import Scene1222 from "../../scenes/1/2/2/2/Scene";
 import {HashRouter, Route, Switch} from "react-router-dom";
 import Container from "../Container";
 import NoSuchLink from "../NoSuchLink";
@@ -40,8 +38,6 @@ export default class RouterConfig extends React.Component {
                         <Route exact path="/scene12" component={Scene12}/>
                         <Route exact path="/scene121" component={Scene121}/>
                         <Route exact path="/scene122" component={Scene122}/>
-                        <Route exact path="/scene1221" component={Scene1221}/>
-                        <Route exact path="/scene1222" component={Scene1222}/>
                         <Route path="/" component={NoSuchLink}/>
                         {/* both /roster and /roster/:number begin with /roster */}
                         {/*<Route path="/roster" component={Roster}/>
