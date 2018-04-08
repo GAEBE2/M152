@@ -32,7 +32,11 @@ export default class GeneralizedScene extends Component {
                     <FadeInBox key="fade-in-box">
                         <img src={this.props.endGif}/>
                         <BoxedButton text="Wiederholen" onClick={() => this.setState({introPlaying: true})} small={true}/>
-                    </FadeInBox>
+                    </FadeInBox>,
+                    <audio key="audio" controls autoPlay loop>
+                        <source src="decide_loop.ogg" type="audio/mp3"></source>
+                        Dein Browser unterstützt keine Audiowiedergabe
+                    </audio>
                 ]}
             </div>
         );

@@ -17,7 +17,7 @@ class Scene extends Component {
                                  this.props.history.push("/end");
                              }, 1000);
                          }}
-                         type="video/mp4"
+                         type="video/avi"
                          autoPlay={true}/>
         </div>
     }
