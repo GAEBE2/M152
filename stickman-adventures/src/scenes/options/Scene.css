@@ -15,7 +15,7 @@
 
 .continue-button {
     display: block;
-    margin: 50px auto auto !important;
+    margin: 30px auto auto !important;
 }
 
 .m-button {
@@ -33,5 +33,9 @@
 }
 
 .gender-buttons {
-    margin: auto;
+    margin: 20px 190px;
+}
+
+.error-text {
+    color: red;
 }
