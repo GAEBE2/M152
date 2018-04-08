@@ -2,8 +2,11 @@ import React, {Component} from "react";
 import "./Scene.css";
 import {withRouter} from 'react-router-dom'
 import BoxedButton from "../../components/BoxedButton/BoxedButton";
+import LocalStorageHandler from "../../js/LocalStorageHandler";
 
-const standardText = "tippe ein...";
+const standardText = "tippe ein...",
+    errorTextName = "Du musst einen Namen auswählen, der keine Abstände und 4 bis 13 Buchstaben beinhaltet.",
+    errorTextGender = "Du musst ein Geschlecht auswählen.";
 
 class Scene extends Component {
     state = {
@@ -15,7 +18,11 @@ class Scene extends Component {
     };
 
     isDisabled() {
-        return this.state.name === standardText || this.state.name === "" || this.state.name.indexOf(" ") > -1 || this.state.name.length > 12;
+        return this.state.name === standardText ||
+            this.state.name === "" ||
+            this.state.name.indexOf(" ") > -1 ||
+            this.state.name.length > 12 ||
+            this.state.name.length < 4;
     }
 
     onClick = () => {
@@ -31,15 +38,17 @@ class Scene extends Component {
     };
 
     onContinue = () => {
-        localStorage.setItem("name", this.state.name);
+        LocalStorageHandler.setItem("name", this.state.name);
         this.props.history.push("/scene1")
     };
 
     onGenderClick(gender) {
-        localStorage.setItem("gender", gender);
+        LocalStorageHandler.setItem("gender", gender);
+        this.setState({gender: gender})
     };
 
     render() {
+        const continueIsDisabled = this.isDisabled();
         return (
             <div>
                 <h1 className="title">Wähle deinen Namen</h1>
@@ -49,8 +58,11 @@ class Scene extends Component {
                     <button className="m-button" onClick={() => this.onGenderClick("m")}></button>
                     <button className="w-button" onClick={() => this.onGenderClick("w")}></button>
                 </div>
-                <BoxedButton className="continue-button" disabled={this.isDisabled()} onClick={this.onContinue}
+                <BoxedButton className="continue-button" disabled={continueIsDisabled} onClick={this.onContinue}
                              text="Weiter" small={true}/>
+
+                {continueIsDisabled && <p className="error-text">{errorTextName}</p> ||
+                this.state.gender === undefined && <p className="error-text">{errorTextGender}</p>}
             </div>
         );
     }

@@ -19,7 +19,10 @@ export default class GeneralizedScene extends Component {
                 {this.state.introPlaying &&
                 <VideoPlayer video={this.props.introVideo}
                              onEndedHandler={() => {
-                                 this.setState({introPlaying: false})
+                                 this.setState({introPlaying: false});
+                                 if(this.props.onEndedHandler !== undefined) {
+                                     this.props.onEndedHandler();
+                                 }
                              }}
                              type="video/mp4"
                              autoPlay={true}/>}
@@ -42,4 +45,5 @@ GeneralizedScene.propTypes = {
     endGif: PropTypes.string.isRequired,
     options: PropTypes.array.isRequired,
     children: PropTypes.array,
+    onEndedHandler: PropTypes.func
 };
