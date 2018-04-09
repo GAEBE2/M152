@@ -4,7 +4,7 @@ import {withRouter} from 'react-router-dom'
 
 class Scene1 extends Component {
     render() {
-        return <h1 className="master-title">Ende</h1>
+        return <h1 className="master-title-2">Ende</h1>
     }
 }
 
