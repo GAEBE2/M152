@@ -12,7 +12,7 @@ class Scene extends Component {
             func: () => this.props.history.push("/scene121")
         },
         {
-            text: "Du holst einen Gartenschlauch",
+            text: "Du machst nichts",
             func: () => this.props.history.push("/scene122")
         }
     ];

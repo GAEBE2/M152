@@ -10,7 +10,7 @@ class Scene extends Component {
         console.log("1.2.1")
 
         return <div>
-            <InfoText text="Du holst einen Gartenschlauch und zielst auf deinen Partner. Dieser wirkt schockiert und duckt sich. Als du ihn anschalten willst, kommt aber kein Wasser raus. Kurze Zeit später kommt ein Schöpflöffel geflogen und du fällst in Ohnmacht."/>
+            <InfoText text="Du bleibst sitzen und gehst nicht auf dein Partner ein. Kurze Zeit später kommt ein Schöpflöffel geflogen und du fällst in Ohnmacht."/>
             <VideoPlayer video={Intro}
                          onEndedHandler={() => {
                              window.setTimeout(() => {
