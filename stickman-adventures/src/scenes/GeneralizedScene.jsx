@@ -5,11 +5,19 @@ import VideoPlayer from "../components/VideoPlayer/VideoPlayer";
 import FadeInBox from "../components/FadeInBox/FadeInBox";
 import PropTypes from "prop-types";
 import BoxedButton from "../components/BoxedButton/BoxedButton";
+import Audio from "./decide_loop.wav";
 
 export default class GeneralizedScene extends Component {
     state = {
         introPlaying: this.props.introVideo !== undefined
     };
+
+    componentWillUnmount() {
+        let audio;
+        if((audio = document.getElementById("audio")) !== null) {
+            audio.pause();
+        }
+    }
 
     render() {
         return (
@@ -33,8 +41,8 @@ export default class GeneralizedScene extends Component {
                         <img src={this.props.endGif}/>
                         <BoxedButton text="Wiederholen" onClick={() => this.setState({introPlaying: true})} small={true}/>
                     </FadeInBox>,
-                    <audio key="audio" controls autoPlay loop>
-                        <source src="decide_loop.ogg" type="audio/mp3"></source>
+                    <audio id="audio" key="audio" autoPlay loop>
+                        <source src={Audio} type="audio/mp3"/>
                         Dein Browser unterstützt keine Audiowiedergabe
                     </audio>
                 ]}
